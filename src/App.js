@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavSearchBar from './components/NavBar';
 import {musicData} from './Data'
 import MusicCard from './components/MusicCard'
+import { useState } from 'react';
 
 function RenderData(){
   return musicData.map(music=><MusicCard 
@@ -13,10 +14,11 @@ function RenderData(){
 }
 
 function App() {
-  
+  const [keyWord,setKeyWord]=useState("")
+  console.log(keyWord)
   return (
     <div className="App">
-      <NavSearchBar/>
+      <NavSearchBar keyWord={keyWord} setKeyWord={setKeyWord}/>
       <ul>
         <RenderData/>
       </ul>

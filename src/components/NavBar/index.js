@@ -5,7 +5,10 @@ import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function NavSearchBar() {
+function NavSearchBar({setKeyWord}) {
+    function handleKeywordChange(e){
+        setKeyWord(e.target.value)
+    }
   return (
     <Navbar className="bg-body-tertiary justify-content-between">
       <Form inline>
@@ -23,6 +26,7 @@ function NavSearchBar() {
           <Col xs="auto">
             <Form.Control
               type="text"
+              onChange={handleKeywordChange}
               placeholder="Search"
               className=" mr-sm-2"
             />

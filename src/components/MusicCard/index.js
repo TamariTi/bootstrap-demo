@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
 function MusicCard({artist,genre,year,albumName}) {
-    console.log({artist,genre,year,albumName})
+    // console.log({artist,genre,year,albumName})
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
